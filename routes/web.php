@@ -2,25 +2,43 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+Route::get('/',function() {
+    return 'Home page';
+});
 
-Route::view('/', 'welcome');
+Route::get('contact',function() {
+    return 'contact us';
+});
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+Route::get('/',function(){
+return'Home page';
+});
 
-Route::view('profile', 'profile')
-    ->middleware(['auth'])
-    ->name('profile');
+Route::get('/about-me',function(){
 
-require __DIR__.'/auth.php';
+    return 'About Us';
+});
+
+// Route::get('/course/{name}',function($name){
+// return 'course is :'.$name ;
+
+// });     
+// Route::get('/m/{jn}/{hours?}',function($jn ,$hours=0){
+//     if ($hours==0) {
+//         return 'my name is :'.$jn;
+//     }else{
+//         return 'my name is :'.$jn.' and hours is :'.$hours;
+//     }
+//     return 'my name is :'.$jn ."&hour course =". $hours;
+ 
+// });
+
+
+// Route::get('/sessions /{Name}/{type?}',function($Name, $type ='online') {
+//     return "course: $Name & type: $type";
+// }); 
+// // Route::get('/',function(){
+//     $link =Route::get('about')
+//     return'<a href='$link'> About us </a>';
+//  });
+

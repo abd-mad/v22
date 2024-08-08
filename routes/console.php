@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
+
+
+// Artisan::command('der', function () {
+//     $this->comment(programer:Abood madhoun);
+// })->purpose('6This is a programer');
